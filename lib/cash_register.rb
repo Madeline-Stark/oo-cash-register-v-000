@@ -47,6 +47,7 @@ class CashRegister
     new_array = []
     new_array << title
     new_array = new_array * number
+    new_array.flatten!
     #title = title * number
     @items << new_array
     @total
