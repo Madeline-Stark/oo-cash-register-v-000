@@ -44,13 +44,13 @@ class CashRegister
     @title = title
     @price = price
     @total += cost
-    new_array = []
-    new_array << title
-    new_array = new_array * number
+    #new_array = []
+    #new_array << title
+    #new_array = new_array * number
     #new_array.join
     #binding.pry
-    #title = title * number
-    @items << new_array
+    title = title * number
+    @items << title    #new_array
     @total
   end
 
