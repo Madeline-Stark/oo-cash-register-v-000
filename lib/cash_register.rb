@@ -72,6 +72,7 @@ class CashRegister
     #stuff = self.items
     #stuff.flatten!
     #stuff
+    binding.pry
     self.items.flatten!
   end
 
