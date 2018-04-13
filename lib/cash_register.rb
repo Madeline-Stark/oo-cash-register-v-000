@@ -1,28 +1,12 @@
-#to call an instance method inside another instance method,
-#we use the self keyword to refer to the instance on which we are operating
-
-#The apply_discount requires some knowledge about working with an Integer versus a Float in Ruby.
-#Note that 100.class returns Integer while 100.0.class returns Float.
-#Ruby provides methods for changing an object of type Integer to a Float and vice versa.
-
-#The void_last_transaction method will remove the last transaction from the total.
-#You'll need to make an additional attribute accessor and keep track of that last transaction amount somehow.
-#In what method of the class are you working with an individual item?
-#so make attr_accessor @last_transaction and put it in instance method
-#maybe do last_transaction = transaction with each initilalize, replacing previous value
-
 require 'pry'
 class CashRegister
   attr_accessor :cash_register, :cash_register_with_discount, :title, :price, :discount, :total, :items, :last
 
-  #@@total = 0
 
   def initialize(discount = 0)
     @cash_register = cash_register
     @last = last
-    #cash_register = self.new
     @discount = discount
-    #cash_register = self
     @total = total
     @cash_register_with_discount = cash_register_with_discount
     @items = items
@@ -33,7 +17,6 @@ class CashRegister
       @cash_register_with_discount = 20
     end
     @total
-    #binding.pry
   end
 
   def self.total
@@ -46,16 +29,9 @@ class CashRegister
     @price = price
     @total += cost
     @last = self.price
-    #new_array = []
-    #new_array << title
-    #new_array = new_array * number
-    #new_array.join
-    #binding.pry
     number.times do
       @items << title
     end
-    #title = title * number
-    #@items << title    #new_array
     @total
   end
 
@@ -63,10 +39,6 @@ class CashRegister
     if @cash_register_with_discount == 20
       @total = total.to_f
       @total = total * 0.8
-    #binding.pry
-    #if cash_register_with_discount == 20
-      #@total = total #- (total * 0.2) #- total(.2) #* 0.8
-    #end
       "After the discount, the total comes to $#{@total.to_i}."
     else
       "There is no discount to apply."
@@ -74,14 +46,9 @@ class CashRegister
   end
 
   def self items
-    #stuff = @items
-    #stuff.uniq
     stuff = self.items
-    #stuff.flat_map {|i| i }
-    #binding.pry
     stuff.flatten!
     stuff
-  #  self.items.flatten!
   end
 
   def void_last_transaction
