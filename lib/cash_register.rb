@@ -44,11 +44,11 @@ class CashRegister
     @title = title
     @price = price
     @total += cost
-    #new_array = []
-    #new_array << title
-    #new_array = new_array * number
-    title = title * number
-    @items << title
+    new_array = []
+    new_array << title
+    new_array = new_array * number
+    #title = title * number
+    @items << new_array
     @total
   end
 
