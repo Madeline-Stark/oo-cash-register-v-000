@@ -71,6 +71,7 @@ class CashRegister
     #stuff.uniq
     stuff = self.items
     stuff.flatten!
+    stuff
   end
 
   def void_last_transaction
