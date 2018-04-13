@@ -65,7 +65,7 @@ class CashRegister
   def self items
     #stuff = @items
     #stuff.uniq
-    self.items = self.items.uniq
+    #self.items = self.items.uniq
     self.items
   end
 
