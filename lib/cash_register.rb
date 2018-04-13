@@ -47,7 +47,7 @@ class CashRegister
     new_array = []
     new_array << title
     new_array = new_array * number
-    new_array.flatten!
+    new_array.join
     binding.pry
     #title = title * number
     @items << new_array
