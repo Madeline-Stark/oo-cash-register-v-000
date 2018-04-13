@@ -70,6 +70,7 @@ class CashRegister
     #stuff = @items
     #stuff.uniq
     stuff = self.items
+    binding.pry
     stuff.flatten!
     stuff
   #  self.items.flatten!
