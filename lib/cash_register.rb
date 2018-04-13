@@ -49,7 +49,7 @@ class CashRegister
     #new_array = new_array * number
     #new_array.join
     #binding.pry
-    number.times do 
+    number.times do
       @items << title
     end
     #title = title * number
