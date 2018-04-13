@@ -47,7 +47,6 @@ class CashRegister
     new_array = []
     new_array << title
     new_array = new_array * number
-    #need to multiply title by the number of items they bought-but can't multiply non integer
     @items << new_array
     @total
   end
