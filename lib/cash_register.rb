@@ -70,8 +70,9 @@ class CashRegister
     #stuff = @items
     #stuff.uniq
     stuff = self.items
+    stuff.flat_map {|i| i }
     #binding.pry
-    stuff.flatten!
+    #stuff.flatten!
     stuff
   #  self.items.flatten!
   end
