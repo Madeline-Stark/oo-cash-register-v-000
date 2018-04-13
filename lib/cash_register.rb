@@ -69,7 +69,7 @@ class CashRegister
   def self items
     #stuff = @items
     #stuff.uniq
-    stuff = self.items.uniq
+    stuff = self.items
     stuff.flatten!
   end
 
