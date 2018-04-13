@@ -64,8 +64,7 @@ class CashRegister
 
   def items
     stuff = @items
-    stuff.uniq!
-    stuff
+    stuff.uniq
   end
 
   def void_last_transaction
