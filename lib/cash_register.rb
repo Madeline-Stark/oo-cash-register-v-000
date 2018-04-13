@@ -19,7 +19,7 @@ class CashRegister
 
   def initialize(discount = 0)
     @cash_register = cash_register
-    @last = cash_register
+    @last = last
     #cash_register = self.new
     @discount = discount
     #cash_register = self
@@ -45,6 +45,7 @@ class CashRegister
     @title = title
     @price = price
     @total += cost
+    @last = self.price
     #new_array = []
     #new_array << title
     #new_array = new_array * number
