@@ -69,9 +69,10 @@ class CashRegister
   def self items
     #stuff = @items
     #stuff.uniq
-    stuff = self.items
-    stuff.flatten!
-    stuff
+    #stuff = self.items
+    #stuff.flatten!
+    #stuff
+    self.items.flatten!
   end
 
   def void_last_transaction
